@@ -224,7 +224,7 @@ function updateViewers() {
             if (!isNaN(count)) {
                 viewerCountSpan.textContent = count;
             } else {
-                viewerCountSpan.textContent = "Стрим офлайн 😴";
+                viewerCountSpan.textContent = "del5cm не стримит";
             }
         })
         .catch(() => {

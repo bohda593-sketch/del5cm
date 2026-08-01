@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>del5cm</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="links-container" id="linksContainer">
+  <p class="links-title">Ссылки на этого позорника:</p>
+  <ul class="links-list">
+    <li><a href="https://twitch.tv/del1ght" target="_blank" rel="noopener noreferrer">TWICTH DEL5CM</a></li>
+    <li><a href="https://t.me/deldaet" target="_blank" rel="noopener noreferrer">TG DEL5CM</a></li>
+  </ul>
+</div>
+
+<p class="top-instruction hidden" id="topInstruction">НАЖМИ ДЕРЖИ И ВОДИ МЫШККОЙ ПО ЭКРАНУ</p>
+
+<div class="container" id="startContainer">
+  <p class="my-text" id="startText">del5cm жми на свой нос</p>
+  <button class="square-btn" id="squareBtn">
+    <img src="images/clown.png" alt="clown">
+  </button>
+</div>
+
+<div class="balloons-container" id="balloonsContainer">
+    <canvas id="balloonsCanvas"></canvas>
+</div>
+
+<div class="grid-background">
+  <img id="del1" class="bg-img" src="images/del1.png" alt="del1">
+  <img id="del2" class="bg-img" src="images/del2.png" alt="del2">
+  <img id="del3" class="bg-img" src="images/del3.png" alt="del3">
+  <img id="del4" class="bg-img" src="images/del4.png" alt="del4">
+</div>
+
+<img class="draggable-img hidden" id="dragImage" src="images/clown2.png" alt="draggable">
+
+<div class="chat-ticker" id="chatTicker">
+  Ожидание сообщения от ахуенный людей...
+</div>
+
+<div class="chat-container" id="chatContainer"></div>
+
+<div class="cringe-meter" id="cringeMeter">
+  <div class="meter-title">ДУШНИЛОМЕТР: <span id="cringeValue">146</span>%</div>
+  <div class="meter-bar-bg">
+    <div class="meter-bar-fill" id="meterFill"></div>
+  </div>
+</div>
+
+<div class="online-counter" id="onlineCounter">
+  Количество зрителей которые смотрят данный позор: <span id="viewerCount">0</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

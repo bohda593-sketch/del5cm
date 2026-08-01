@@ -1,0 +1,271 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: #141422;
+  color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.online-counter {
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 15px;
+  width: 333px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: monospace;
+  font-size: 13px;
+  box-shadow: 0 0 10px rgba(14, 13, 13, 0.4);
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.cringe-meter {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 999;
+  width: 333px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-family: monospace;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.meter-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #d8bbbb;
+  margin-bottom: 8px;
+}
+
+.meter-bar-bg {
+  width: 100%;
+  height: 12px;
+  background: #222;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #4d0c21;
+}
+
+.meter-bar-fill {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #00bcd4, #fc0101);
+  transition: width 0.3s ease;
+}
+
+.chat-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  width: 400px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0);
+  color: #fff;
+  font-family: monospace;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(2, 2, 2, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.chat-message {
+  margin-top: 10px;
+  word-break: break-word;
+}
+
+.chat-ticker {
+  display: none;
+}
+
+.links-container {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  text-align: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.links-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  color: #fff;
+}
+
+.links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links-list li {
+  margin-bottom: 6px;
+}
+
+.links-list a {
+  color: #00bcd4;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.links-list a:hover {
+  color: #ff4081;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top-instruction {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000000;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 0;
+  z-index: 50;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #00f3ff,
+    0 0 40px #00f3ff,
+    0 0 80px #00f3ff;
+}
+
+.hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.my-text {
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.square-btn {
+  width: 200px;
+  height: 200px;
+  background: transparent;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.1s ease;
+  flex-shrink: 0;
+}
+
+.square-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+}
+
+.square-btn:active {
+  transform: scale(0.95);
+}
+
+.grid-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bg-img {
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#del1 { top: 0; left: 0; width: 50%; height: 50%; }
+#del2 { top: 0; right: 0; width: 50%; height: 50%; }
+#del3 { bottom: 0; left: 0; width: 50%; height: 50%; }
+#del4 { bottom: 0; right: 0; width: 50%; height: 50%; }
+
+.bg-img.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.draggable-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  cursor: grab;
+  user-select: none;
+  z-index: 1000;
+}
+
+.draggable-img:active {
+  cursor: grabbing;
+}
+
+.balloons-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.balloons-container.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#balloonsCanvas {
+  width: 100%;
+  height: 100%;
+}
